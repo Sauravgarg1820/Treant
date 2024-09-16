@@ -8,7 +8,7 @@ import com.trent.generic.objectUtility.HomePage;
 
 public class CreateOrganizationTest extends BaseClass{
 	
-	@Test
+	@Test(groups = "smoke")
 	public void createOrganizationTest() throws Throwable {
 		String organizationName = eLib.getdatafromexcelsheet("Sheet1", 0, 3)+jLib.getRandonNumber();
 		HomePage hp=new HomePage(driver);

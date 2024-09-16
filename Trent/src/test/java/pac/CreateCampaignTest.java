@@ -8,7 +8,7 @@ import com.trent.generic.objectUtility.HomePage;
 
 public class CreateCampaignTest extends BaseClass {
 
-	@Test
+	@Test(groups = "smoke")
 	public void createCampaignTest() throws Throwable {
 
 		String campaignName = eLib.getdatafromexcelsheet("Sheet1", 2, 2) + jLib.getRandonNumber();
