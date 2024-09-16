@@ -3,13 +3,13 @@
 <suite name="Suite" parallel="tests" thread-count="5">
   <test thread-count="5" name="Test1">
     <classes>
-      <class name=".CreateCampaignTest"/>
+      <class name="pac.CreateOrganizationTest"/>
     </classes>
   </test> <!-- Test -->
   
   <test thread-count="5" name="Test2">
     <classes>
-      <class name=".CreateOrganizationTest"/>
+      <class name="pac.CreateCampaignTest"/>
     </classes>
-  </test> 
+  </test> <!-- Test -->
 </suite> <!-- Suite -->

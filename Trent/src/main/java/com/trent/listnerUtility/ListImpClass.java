@@ -14,19 +14,20 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.trent.basetestUtility.BaseClass;
 import com.trent.generic.webdriverutility.UtilityClassObject;
 
 public class ListImpClass implements ISuiteListener, ITestListener {
 	public static ExtentSparkReporter spark;
 	public static ExtentReports report;
-	public static ExtentTest test;
+	public  ExtentTest test;
 
 	@Override
 	public void onStart(ISuite suite) {
 		System.out.println("Report Configuration");
 		String time = new Date().toString().replace(" ", "_").replace(":", "_");
 		
-		spark = new ExtentSparkReporter("./AdvancedReport/report.html");
+		spark = new ExtentSparkReporter("./AdvancedReport/report_"+time+".html");
 		spark.config().setDocumentTitle("CRM Test Suit Result");
 		spark.config().setReportName("CRM Report");
 		spark.config().setTheme(Theme.DARK);
@@ -57,12 +58,14 @@ public class ListImpClass implements ISuiteListener, ITestListener {
 
 	@Override
 	public void onTestFailure(ITestResult result) {
+
 		String testName = result.getMethod().getMethodName();
-		TakesScreenshot ts= (TakesScreenshot)UtilityClassObject.getdriver();
+		TakesScreenshot ts = (TakesScreenshot)UtilityClassObject.getdriver();
 		String filepath = ts.getScreenshotAs(OutputType.BASE64);
 		String time = new Date().toString().replace(" ", "_").replace(":", "_");
-	     test.addScreenCaptureFromBase64String(filepath,testName+"_"+time);
-		 test.log(Status.FAIL, result.getMethod().getMethodName()+"====FAILED====");
+		test.addScreenCaptureFromBase64String(filepath, testName + "_ " + time);
+		test.log(Status.FAIL, result.getMethod().getMethodName() + "====FAILED====");
+		 
 	}
 
 	@Override

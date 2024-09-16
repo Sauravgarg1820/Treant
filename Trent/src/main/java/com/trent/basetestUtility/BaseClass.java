@@ -17,17 +17,19 @@ import com.trent.generic.fileutility.Fileutility;
 import com.trent.generic.objectUtility.HomePage;
 import com.trent.generic.objectUtility.LoginPage;
 import com.trent.generic.webdriverutility.JavaUtility;
+import com.trent.generic.webdriverutility.UtilityClassObject;
 import com.trent.generic.webdriverutility.WebdriverUtility;
 
 public class BaseClass {
 
-	public WebDriver driver;
+	public static WebDriver driver;
 	// object creation
 	public DataBaseUtility dLib = new DataBaseUtility();
 	public ExcelUtility eLib = new ExcelUtility();
 	public Fileutility fLib = new Fileutility();
 	public JavaUtility jLib = new JavaUtility();
 	public WebdriverUtility wLib = new WebdriverUtility();
+	public static WebDriver sdriver=null;
 
 	@BeforeSuite
 	public void configBS() throws Throwable {
@@ -48,7 +50,8 @@ public class BaseClass {
 		} else {
 			driver = new ChromeDriver();
 		}
-
+		sdriver = driver;
+		UtilityClassObject.setdriver(sdriver);
 	}
 
 	@BeforeMethod
@@ -63,7 +66,7 @@ public class BaseClass {
 	@AfterMethod
 	public void configAM() {
 		HomePage hp = new HomePage(driver);
-		//hp.logout();
+		// hp.logout();
 	}
 
 	@AfterClass

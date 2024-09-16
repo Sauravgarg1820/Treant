@@ -1,4 +1,5 @@
 package pac;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.trent.basetestUtility.BaseClass;
@@ -6,7 +7,9 @@ import com.trent.generic.objectUtility.CreateCampaignPage;
 import com.trent.generic.objectUtility.CreatingNewCampaignPage;
 import com.trent.generic.objectUtility.HomePage;
 
+@Listeners(com.trent.listnerUtility.ListImpClass.class)
 public class CreateCampaignTest extends BaseClass {
+	
 
 	@Test(groups = "smoke")
 	public void createCampaignTest() throws Throwable {
