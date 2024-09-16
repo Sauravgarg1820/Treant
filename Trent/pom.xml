@@ -8,7 +8,7 @@
 
 	<profiles>
 		<profile>
-			<id>GE</id>
+			<id>ST</id>
 			<build>
 				<plugins>
 					<plugin>
@@ -24,9 +24,9 @@
 				</plugins>
 			</build>
 		</profile>
-		
-			<profile>
-			<id>GE</id>
+
+		<profile>
+			<id>RT</id>
 			<build>
 				<plugins>
 					<plugin>
