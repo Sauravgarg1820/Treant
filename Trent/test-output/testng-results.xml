@@ -2,43 +2,43 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-16T16:45:17 IST" name="Default suite" finished-at="2024-09-16T16:45:30 IST" duration-ms="12936">
+  <suite started-at="2024-09-16T18:36:13 IST" name="Default suite" finished-at="2024-09-16T18:36:25 IST" duration-ms="12020">
     <groups>
-      <group name="regression">
-        <method signature="CreateOrganizationTest.createOrganizationTest()[pri:0, instance:pac.CreateOrganizationTest@73a1e9a9]" name="createOrganizationTest" class="pac.CreateOrganizationTest"/>
-      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="CreateCampaignTest.createCampaignTest()[pri:0, instance:pac.CreateCampaignTest@73a1e9a9]" name="createCampaignTest" class="pac.CreateCampaignTest"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2024-09-16T16:45:17 IST" name="Default test" finished-at="2024-09-16T16:45:30 IST" duration-ms="12936">
-      <class name="pac.CreateOrganizationTest">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:pac.CreateOrganizationTest@73a1e9a9]" started-at="2024-09-16T16:45:17 IST" name="configBS" finished-at="2024-09-16T16:45:17 IST" duration-ms="40" status="PASS">
+    <test started-at="2024-09-16T18:36:13 IST" name="Default test" finished-at="2024-09-16T18:36:25 IST" duration-ms="12020">
+      <class name="pac.CreateCampaignTest">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:pac.CreateCampaignTest@73a1e9a9]" started-at="2024-09-16T18:36:13 IST" name="configBS" finished-at="2024-09-16T18:36:13 IST" duration-ms="27" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBS -->
-        <test-method is-config="true" signature="configBC()[pri:0, instance:pac.CreateOrganizationTest@73a1e9a9]" started-at="2024-09-16T16:45:17 IST" name="configBC" finished-at="2024-09-16T16:45:19 IST" duration-ms="2140" status="PASS">
+        <test-method is-config="true" signature="configBC()[pri:0, instance:pac.CreateCampaignTest@73a1e9a9]" started-at="2024-09-16T18:36:13 IST" name="configBC" finished-at="2024-09-16T18:36:15 IST" duration-ms="1807" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:pac.CreateOrganizationTest@73a1e9a9]" started-at="2024-09-16T16:45:19 IST" name="configBM" finished-at="2024-09-16T16:45:23 IST" duration-ms="3584" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:pac.CreateCampaignTest@73a1e9a9]" started-at="2024-09-16T18:36:15 IST" name="configBM" finished-at="2024-09-16T18:36:18 IST" duration-ms="2959" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method signature="createOrganizationTest()[pri:0, instance:pac.CreateOrganizationTest@73a1e9a9]" started-at="2024-09-16T16:45:23 IST" name="createOrganizationTest" finished-at="2024-09-16T16:45:29 IST" duration-ms="6817" status="PASS">
+        <test-method signature="createCampaignTest()[pri:0, instance:pac.CreateCampaignTest@73a1e9a9]" started-at="2024-09-16T18:36:18 IST" name="createCampaignTest" finished-at="2024-09-16T18:36:25 IST" duration-ms="7022" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createOrganizationTest -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:pac.CreateOrganizationTest@73a1e9a9]" started-at="2024-09-16T16:45:29 IST" name="configAM" finished-at="2024-09-16T16:45:29 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- createCampaignTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:pac.CreateCampaignTest@73a1e9a9]" started-at="2024-09-16T18:36:25 IST" name="configAM" finished-at="2024-09-16T18:36:25 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:pac.CreateOrganizationTest@73a1e9a9]" started-at="2024-09-16T16:45:29 IST" name="configAC" finished-at="2024-09-16T16:45:30 IST" duration-ms="339" status="PASS">
+        <test-method is-config="true" signature="configAC()[pri:0, instance:pac.CreateCampaignTest@73a1e9a9]" started-at="2024-09-16T18:36:25 IST" name="configAC" finished-at="2024-09-16T18:36:25 IST" duration-ms="184" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:pac.CreateOrganizationTest@73a1e9a9]" started-at="2024-09-16T16:45:30 IST" name="configAS" finished-at="2024-09-16T16:45:30 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="configAS()[pri:0, instance:pac.CreateCampaignTest@73a1e9a9]" started-at="2024-09-16T18:36:25 IST" name="configAS" finished-at="2024-09-16T18:36:25 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->
-      </class> <!-- pac.CreateOrganizationTest -->
+      </class> <!-- pac.CreateCampaignTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

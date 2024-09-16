@@ -41,7 +41,7 @@ public class BaseClass {
 
 	@BeforeClass
 	public void configBC() throws Throwable {
-		String BROWSER = fLib.getdatafrompropertyfile("browser");
+		String BROWSER = System.getProperty("browsser", fLib.getdatafrompropertyfile("browser"));         
 		if (BROWSER.equals("chrome")) {
 			driver = new ChromeDriver();
 
@@ -56,9 +56,9 @@ public class BaseClass {
 
 	@BeforeMethod
 	public void configBM() throws Throwable {
-		String URL = fLib.getdatafrompropertyfile("url");
-		String USERNAME = fLib.getdatafrompropertyfile("username");
-		String PASSWORD = fLib.getdatafrompropertyfile("password");
+		String URL = System.getProperty("url", fLib.getdatafrompropertyfile("url"));
+		String USERNAME = System.getProperty("username", fLib.getdatafrompropertyfile("username"));
+		String PASSWORD = System.getProperty("password", fLib.getdatafrompropertyfile("password"));
 		LoginPage lp = new LoginPage(driver);
 		lp.loginToApp(URL, USERNAME, PASSWORD);
 	}
