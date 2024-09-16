@@ -1,6 +1,6 @@
 package com.trent.basetestUtility;
 
-import org.junit.AfterClass;
+import org.testng.annotations.AfterClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -51,7 +51,7 @@ public class BaseClass {
 			driver = new ChromeDriver();
 		}
 		sdriver = driver;
-		UtilityClassObject.setdriver(sdriver);
+		
 	}
 
 	@BeforeMethod

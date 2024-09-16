@@ -1,11 +1,12 @@
 package pac;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.trent.basetestUtility.BaseClass;
 import com.trent.generic.objectUtility.CreateOrganizationPage;
 import com.trent.generic.objectUtility.CreatingNewOrganizationPage;
 import com.trent.generic.objectUtility.HomePage;
-
+@Listeners(com.trent.listnerUtility.ListImpClass.class)
 public class CreateOrganizationTest extends BaseClass{
 	
 	@Test(groups = "regression")

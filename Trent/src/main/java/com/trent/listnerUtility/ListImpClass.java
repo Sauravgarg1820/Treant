@@ -18,9 +18,9 @@ import com.trent.basetestUtility.BaseClass;
 import com.trent.generic.webdriverutility.UtilityClassObject;
 
 public class ListImpClass implements ISuiteListener, ITestListener {
-	public static ExtentSparkReporter spark;
-	public static ExtentReports report;
-	public  ExtentTest test;
+	public  ExtentSparkReporter spark;
+	public  ExtentReports report;
+	public static ExtentTest test;
 
 	@Override
 	public void onStart(ISuite suite) {
@@ -46,8 +46,8 @@ public class ListImpClass implements ISuiteListener, ITestListener {
 
 	@Override
 	public void onTestStart(ITestResult result) {
-       report.createTest(result.getMethod().getMethodName());
-       UtilityClassObject.setTest(test);
+      test= report.createTest(result.getMethod().getMethodName());
+       
        test.log(Status.INFO, result.getMethod().getMethodName()+"======Started======");
 	}
 
@@ -60,7 +60,7 @@ public class ListImpClass implements ISuiteListener, ITestListener {
 	public void onTestFailure(ITestResult result) {
 
 		String testName = result.getMethod().getMethodName();
-		TakesScreenshot ts = (TakesScreenshot)UtilityClassObject.getdriver();
+		TakesScreenshot ts = (TakesScreenshot)BaseClass.sdriver;
 		String filepath = ts.getScreenshotAs(OutputType.BASE64);
 		String time = new Date().toString().replace(" ", "_").replace(":", "_");
 		test.addScreenCaptureFromBase64String(filepath, testName + "_ " + time);
